@@ -1,0 +1,52 @@
+{
+  "_legend": {
+    "_note": "このフィールドはパーサに無視される凡例です。",
+    "_timing": "time / duration の単位は【ビート】。ChartLoader が 60/BPM を乗算して秒に変換する。BPM=90 なら 1拍 = 0.6667s",
+    "type": {
+      "0": "StepTap    — 単押し（黒）。叩くと相手にダメージ。見逃してもペナルティなし",
+      "1": "StepHold   — 長押し（黒）。叩いて押し続けると相手にダメージ。終端判定なし",
+      "2": "StepAerial — 横矢印（黒）。叩くと横スライドしてキラーを回避",
+      "3": "KillerTap  — 単押し（赤）。成功でカウンターダメージ、失敗で自分がダメージ",
+      "4": "KillerHold — 長押し（赤）。成功でカウンターダメージ、失敗で自分がダメージ"
+    },
+    "aerialDirection": { "0": "Left", "1": "Right" },
+    "aerialDifficultyType": { "0": "A=難易度上昇", "1": "B=難易度低下", "2": "C=変化なし" },
+    "duration": "ホールドノーツの押下継続時間（ビート）。タップ系は 0"
+  },
+  "songTitle": "Canon Sample",
+  "artist": "Pachelbel (Sample)",
+  "bpm": 90.0,
+  "offset": 0.0,
+  "notes": [
+    { "time":  0,     "lane": 3, "type": 0, "duration": 0,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  2,   "lane": 2, "type": 0, "duration": 0,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  4,     "lane": 1, "type": 1, "duration": 2,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  8,     "lane": 1, "type": 0, "duration": 0,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  10,     "lane": 2, "type": 0, "duration": 0,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  12,     "lane": 3, "type": 1, "duration": 2,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  16,     "lane": 3, "type": 0, "duration": 0,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  16,     "lane": 2, "type": 0, "duration": 0,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  18,   "lane": 2, "type": 0, "duration": 0,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  18,   "lane": 1, "type": 0, "duration": 0,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  20,     "lane": 1, "type": 1, "duration": 2,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  20,     "lane": 0, "type": 1, "duration": 2,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  24,     "lane": 1, "type": 0, "duration": 0,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  24,     "lane": 2, "type": 0, "duration": 0,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  26,     "lane": 2, "type": 0, "duration": 0,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  26,     "lane": 3, "type": 0, "duration": 0,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  28,     "lane": 3, "type": 1, "duration": 2,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  28,     "lane": 4, "type": 1, "duration": 2,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  32,     "lane": 3, "type": 0, "duration": 0,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  32,     "lane": 2, "type": 0, "duration": 0,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  34,   "lane": 2, "type": 0, "duration": 0,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  34,   "lane": 1, "type": 0, "duration": 0,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  36,     "lane": 1, "type": 1, "duration": 2,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  36,     "lane": 0, "type": 1, "duration": 2,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  40,     "lane": 1, "type": 0, "duration": 0,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  40,     "lane": 2, "type": 0, "duration": 0,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  42,     "lane": 2, "type": 0, "duration": 0,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  42,     "lane": 3, "type": 0, "duration": 0,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  44,     "lane": 3, "type": 1, "duration": 2,   "aerialDirection": 0, "aerialDifficultyType": 2 },
+    { "time":  44,     "lane": 4, "type": 1, "duration": 2,   "aerialDirection": 0, "aerialDifficultyType": 2 }
+  ]
+}
