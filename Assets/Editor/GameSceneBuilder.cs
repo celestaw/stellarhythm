@@ -72,7 +72,7 @@ namespace StellarRhythm.Editor
             go.tag = "MainCamera";
             go.transform.SetParent(root);
 
-            go.transform.position = new Vector3(0f, 2.5f, -10f);
+            go.transform.position = new Vector3(0f, 2.5f, -3f);
             go.transform.rotation = Quaternion.Euler(15f, 0f, 0f);
 
             var cam = go.AddComponent<Camera>();
