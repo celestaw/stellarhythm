@@ -88,6 +88,7 @@ namespace StellarRhythm.Gameplay
         int      _nextNoteIndex;
         double   _dspStartTime;
         bool     _isPlaying;
+        float    _beatSeconds;  // 1 拍の秒数（= 60 / BPM）。NoteView.Initialize に渡す
 
         // ================================================================
         //  ライフサイクル
@@ -206,7 +207,7 @@ namespace StellarRhythm.Gameplay
 
             double hitDspTime = _dspStartTime + _chart.offset + note.time;
             if (go.TryGetComponent<NoteView>(out var view))
-                view.Initialize(hitDspTime, note, _lookAheadSeconds);
+                view.Initialize(hitDspTime, note, _lookAheadSeconds, _beatSeconds);
         }
 
         GameObject PrefabFor(NoteType type) => type switch
@@ -237,6 +238,7 @@ namespace StellarRhythm.Gameplay
 
             // time / duration はビート単位で記述されているため秒に変換する
             float beatLen = 60f / _chart.bpm;
+            _beatSeconds  = beatLen;
             for (int i = 0; i < _chart.notes.Count; i++)
             {
                 var n = _chart.notes[i];

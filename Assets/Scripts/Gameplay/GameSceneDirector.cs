@@ -118,10 +118,12 @@ namespace StellarRhythm.Gameplay
 
             float bpm = _chartLoader.Bpm;
 
-            // LookAhead = 1 小節分の秒数（notes が spawn 地点に正確に揃う）
+            // LookAhead = 1 小節分の秒数 ÷ ハイスピード倍率
+            // HiSpeed 5.0 が基準（倍率 1.0）。10.0 で 2 倍速、2.5 で 0.5 倍速。
             double beatDuration    = 60.0 / bpm;
             float  preCountSeconds = (float)(_beatsPerMeasure * beatDuration);
-            _chartLoader.LookAheadSeconds = preCountSeconds;
+            float  speedFactor     = GameContext.HiSpeed / 5f;
+            _chartLoader.LookAheadSeconds = preCountSeconds / speedFactor;
 
             // ── 1. "Synchronizing Field..." ──────────────────────────────
             yield return ShowMessage("Synchronizing Field...", displayTime: 0.3f, fadeTime: 0.2f);

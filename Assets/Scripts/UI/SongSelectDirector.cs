@@ -43,7 +43,31 @@ namespace StellarRhythm.UI
             }
 
             GameContext.SelectedSong = _songs[index];
-            SceneManager.LoadScene(_gameSceneName);
+            ShowSpeedPanel();
+        }
+
+        void ShowSpeedPanel()
+        {
+            // ボタンの属する Canvas を取得（フォールバックで FindFirstObjectByType）
+            Canvas canvas = (_songButtons != null && _songButtons.Length > 0 && _songButtons[0] != null)
+                ? _songButtons[0].GetComponentInParent<Canvas>()
+                : null;
+
+            if (canvas == null)
+                canvas = FindFirstObjectByType<Canvas>();
+
+            if (canvas == null)
+            {
+                Debug.LogError("[SongSelectDirector] Canvas が見つかりません。直接遷移します。");
+                SceneManager.LoadScene(_gameSceneName);
+                return;
+            }
+
+            SpeedSelectPanel.Create(canvas.transform, GameContext.HiSpeed, speed =>
+            {
+                GameContext.HiSpeed = speed;
+                SceneManager.LoadScene(_gameSceneName);
+            });
         }
     }
 }
